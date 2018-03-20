@@ -1,0 +1,17 @@
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Glow.shader">
+    <Files>
+      <File FileName="Assets\MeshGenerator.cs" Line="51" Column="42" />
+      <File FileName="Assets\VertColored.shader" Line="1" Column="1" />
+      <File FileName="Assets\Node.cs" Line="37" Column="30" />
+      <File FileName="Assets\TriMeshGenerator.cs" Line="50" Column="32" />
+      <File FileName="Assets\Singleton.cs" Line="5" Column="75" />
+      <File FileName="Assets\Glow.shader" Line="1" Column="1" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

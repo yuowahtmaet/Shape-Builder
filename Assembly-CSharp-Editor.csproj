@@ -50,6 +50,7 @@
      <None Include="Assets\UnityVC\StandardVC.shader" />
      <None Include="Assets\UnityVC\StandardSpecularVC.shader" />
      <None Include="Assets\UnityVC\UnityVCShadow.cginc" />
+     <None Include="Assets\VertColored.shader" />
      <None Include="Assets\UnityVC\UnityVC.cginc" />
  <Reference Include="UnityEditor.Advertisements">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/Advertisements/Editor/UnityEditor.Advertisements.dll</HintPath>

@@ -8,12 +8,13 @@ public class MeshGenerator : MonoBehaviour {
 
 	private float length = 1;
 	public int type = 1;
+	private Vector3[] vertices = new Vector3[3];
+	public GameObject node;
+
 
 	// Use this for initialization
 	void Start ()
 	{
-		Vector3[] vertices = new Vector3[3];
-
 		if (type == 0)
 		{
 			vertices [0] = new Vector3 (-length / 2, 0);
@@ -33,21 +34,34 @@ public class MeshGenerator : MonoBehaviour {
 			vertices [2] = new Vector3 (length / 2, 0);
 		}
 
-		Color[] colors = new Color[3];
-		for(int i = 0; i < 3 ;i++)
-		{
-			colors [i] = Color.Lerp (Color.red, Color.green, vertices [i].y);
-		}
+		Color32[] colors = new Color32[3];
+		colors [0] = new Color (1, 0.5f, 0, 1);
+		colors [1] = new Color (1, 0.5f, 0, 1);
+		colors [2] = new Color (1, 0.5f, 0, 1);
 
 		Mesh mesh = new Mesh
 		{
 			vertices = vertices,
 			triangles = new int[] {0,1,2},
-			colors = colors
+			colors32 = colors
 		};
 
-		GetComponent<MeshRenderer> ().material = mat;
+		GetComponent<MeshRenderer>().material = mat;
 
-		GetComponent<MeshFilter> ().mesh = mesh;
+		GetComponent<MeshFilter>().mesh = mesh;
+
+		GenerateNodes();
+	}
+
+	void GenerateNodes()
+	{
+		Vector3 position = Vector3.Lerp (vertices [0], vertices [1],0.5f);
+		Instantiate (node, position + this.transform.position, Quaternion.identity);
+
+		position = Vector3.Lerp (vertices [1], vertices [2],0.5f);
+		Instantiate (node, position + this.transform.position, Quaternion.identity);
+
+		position = Vector3.Lerp (vertices [2], vertices [0],0.5f);
+		Instantiate (node, position + this.transform.position, Quaternion.identity);
 	}
 }

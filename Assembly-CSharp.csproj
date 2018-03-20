@@ -47,10 +47,12 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\MeshGenerator.cs" />
-     <None Include="Assets\UnityVC\StandardVC.shader" />
-     <None Include="Assets\UnityVC\StandardSpecularVC.shader" />
-     <None Include="Assets\UnityVC\UnityVCShadow.cginc" />
-     <None Include="Assets\UnityVC\UnityVC.cginc" />
+     <Compile Include="Assets\Node.cs" />
+     <Compile Include="Assets\Singleton.cs" />
+     <Compile Include="Assets\Test.cs" />
+     <Compile Include="Assets\TriMeshGenerator.cs" />
+     <None Include="Assets\Glow.shader" />
+     <None Include="Assets\VertColored.shader" />
  <Reference Include="UnityEngine.UI">
  <HintPath>D:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
